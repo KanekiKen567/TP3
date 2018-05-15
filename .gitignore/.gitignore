@@ -1,0 +1,71 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+
+
+// testa ot tuk
+
+
+#include <iostream>
+#include <stack>
+
+using namespace std;
+int main()
+{
+ int i;
+ int ball;
+ stack <int> balls;
+    for(i=0;i<5;i++)
+        {
+         cout<<"Push ball:";
+         cin>>ball;
+         balls.push(ball);
+        }
+    while(!balls.empty())
+        {
+            ball=balls.top();
+            balls.pop();
+                if(balls.empty())
+                    {
+                        cout<<"There is no white ball!\n";
+                        break;  
+                    }
+                else
+                    {
+                        cout<<"White ball! => Stop popping!\n";
+                        break;
+                    }
+        }
+return 0;
+}
